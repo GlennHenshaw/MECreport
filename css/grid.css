@@ -1,0 +1,161 @@
+body {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.head {
+    background-color: steelBlue;
+    text-align: center;
+     border-radius: 15px 15px 15px 15px;
+}
+
+.head h1 {
+  color:White;
+  opacity:1;
+
+}
+
+
+
+h3 {
+  color:steelBlue;
+  opacity:.9;
+  font-size: 25px;
+}
+.head p {
+  color:white;
+  font-size: 15px;
+  font-weight: 200;
+}
+g.tick text{
+  font-size: 10px;
+
+}
+.btn {
+  margin: 5px 5px 5px 5px;
+  border-color: SteelBlue;
+  color:SteelBlue;
+  transition: .5s;
+}
+
+.bar {
+  fill: steelBlue;
+  opacity: .8;
+}
+.graph-title{
+  fill: black;
+  font-size: 16px; 
+  opacity: .7;
+}
+
+.btn:hover {
+    background-color: #E04836;
+    opacity:.7;
+}
+
+/*.menu:hover .pressed{
+  background-color: #FFF; 
+  color: steelBlue; 
+}*/
+
+.barcharts{
+   align-items: center;
+  justify-content: center;
+}
+
+.picture{
+   align-items: center;
+  justify-content: center;
+}
+.menu {
+  align-items: center;
+  justify-content: center;
+}
+
+.pressed {
+    background-color: #E04836;
+    opacity:.7;
+    color:white;
+}
+.axis path,
+.axis line {
+        fill: none;
+        stroke: black;
+        shape-rendering: crispEdges;
+      }
+      
+
+  .axis text {
+        font-family: sans-serif;
+        font-size:100px;
+        color: black;
+      }
+.bar-labels {
+ /* fill:white;*/
+  font-family: sans-serif;
+  font-size: 12px;
+  fill: white;
+}
+.lead {
+  font-size: 15px;
+}
+
+
+strong {
+  font-weight: 600;
+}
+
+h3 {
+  margin-top: 2rem;
+}
+
+.row {
+  margin-bottom: 1rem;
+}
+.row .row {
+  margin-top: 1rem;
+  margin-bottom: 0;
+}
+[class*="col-"] {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  color: white;
+  border: 0px solid rgba(86, 61, 124, .2);
+}
+
+hr {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.pie-graph{
+  align-items: center;
+  justify-content: center;
+   
+}
+.pierow {
+    align-items: center;
+  justify-content: center;
+
+}
+
+/* pie */
+
+
+
+
+.pie-graph path {
+  stroke: black;
+}
+.pie-graph text {
+  font-size: 10px;
+  fill: black;
+  text-anchor: middle;
+}
+
+text.inner-pie-labels {
+  font-size: 10px;
+  fill: white;
+  text-anchor: middle;
+
+}
