@@ -1,6 +1,6 @@
-var margin = {top: 30, right: 20, bottom: 20, left: 20};
+var margin = {top: 30, right: 20, bottom: 25, left: 20};
 var height = 150 - margin.top - margin.bottom;
-var width = 200 - margin.left - margin.right;
+var width = 250 - margin.left - margin.right;
 var svg = {};
 var y = {};
 var x = {};
@@ -87,7 +87,7 @@ d3.csv("oer_data.csv").then(function(data){
                       .append("text")
                       .attr("class","bar-labels")
                       .attr('text-anchor', 'middle')
-                      .attr("x",(d,i) => x[column](d.semester)+30)
+                      .attr("x",(d,i) => x[column](d.semester)+35)
                       .attr("y",(d) => margin.top+y[column](d[column]))
                       .text((d)=>(column=='savings') ? "$"+d3.format(".3s")(d[column]):
                       	d3.format(",")(d[column]));

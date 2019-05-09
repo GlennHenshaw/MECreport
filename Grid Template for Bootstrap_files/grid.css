@@ -9,9 +9,12 @@ body {
      border-radius: 15px 15px 15px 15px;
 }
 .head h1 {
-  color:black;
-  opacity:.7;
+  color:#FFF;
+  opacity:1;
+
 }
+
+
 
 h3 {
   color:steelBlue;
@@ -23,7 +26,10 @@ h3 {
   font-size: 15px;
   font-weight: 200;
 }
+g.tick text{
+  font-size: 13px;
 
+}
 .btn {
   margin: 5px 5px 5px 5px;
   border-color: SteelBlue;
@@ -36,7 +42,7 @@ h3 {
 }
 .graph-title{
   fill: #E04836;
-  font-size: 15px; 
+  font-size: 16px; 
   opacity: .8;
 }
 
@@ -45,6 +51,20 @@ h3 {
     opacity:.7;
 }
 
+/*.menu:hover .pressed{
+  background-color: #FFF; 
+  color: steelBlue; 
+}*/
+
+.barcharts{
+   align-items: center;
+  justify-content: center;
+}
+
+.picture{
+   align-items: center;
+  justify-content: center;
+}
 .menu {
   align-items: center;
   justify-content: center;
