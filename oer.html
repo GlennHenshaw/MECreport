@@ -12,9 +12,9 @@
     <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/grid/">
 
     <!-- Bootstrap core CSS -->
-    <link href="./Grid Template for Bootstrap_files/bootstrap.min.css" rel="stylesheet">
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom styles for this template -->
-    <link href="./Grid Template for Bootstrap_files/grid.css" rel="stylesheet">
+    <link href="./css/grid.css" rel="stylesheet">
     <script src="d3.min.js"></script>
   </head>
 
@@ -31,11 +31,12 @@
 
 
        <div class="row menu">
-        <a class="btn btn-primary btn-outline-primary" href="index.html" role="button">Introduction</a>
+         <a class="btn btn-primary btn-outline-primary" href="index.html" role="button">Introduction</a>
         <a class="btn btn-primary btn-outline-primary" href="highlights.html" role="button">Highlights</a>
         <a class="btn btn-primary btn-outline-primary" href="general_info.html" role="button">General MEC Statistics</a>
         <a class="btn btn-primary btn-outline-primary pressed" href="oer.html" role="button">OER and Digital Technology</a>
         <a class="btn btn-primary btn-outline-primary" href="coreq.html" role="button">Co-requsite Courses/accelerated models</a>
+        <a class="btn btn-primary btn-outline-primary" href="student_research.html" role="button">Student Reseearch and contests</a>
 
 
       </div>
@@ -45,18 +46,32 @@
 
       <section>
         <p class="lead">
-        <strong>Open educational resources (OER)</strong> are free and openly licensed educational materials that can be used for teaching, learning, research, and other purposes.
+        <strong>Open educational resources (OER)</strong> are educational materials that openly licensed and can be used for teaching, learning, research, and other purposes. OER resourses usually have creative commons licenses.
         <p class="lead">
         Developing OER was a major initiative for MEC during the 2018-2019 academic year. Below we list some of our accomplishments and statistics pertaining to our OER efforts.
         </p>
       </section>
+
+      <section>
+        <h3>OER materials and platforms</h3>
+        <p class="lead">For all of our OER sections we are using the <a href="https://lumenlearning.com/">Lumen Learning Platform</a>. Our master sections are hosted on their Lumen ohm server. Lumen offers a complete education managment system with grade books, a problem bank and communication capabilities. </p>
+      </section> 
+
       <section>
         <h3>OER implimentation</h3>
-        <p class="lead">OER has been completely implimented in the following courses MAT095, MAT099, MAT117, MAT115, MAT119, MAT120.
-        The master sections for these courses are in their final versions. And new syllabi have been approved by both the department and college curriculum commiteeies. In addition, in Spring I 2019, we are piloting a section of MAT121 using OER resourses.</p>
+        <p class="lead">OER has been completely implimented in the following courses 
+          <ul>
+            <li>MAT095: Introduction to Algebra</li>             
+            <li>MAT099: Fundamentals of Algebra</li>
+            <li>MAT117: Algebra and Trigonometry</li>
+            <li>MAT115: College Algebra and Trigonometry</li>
+            <li>MAT120: Introduction to Statistics</li>
+          </ul>
+        Each course has an OER textbook and a master section that includes automatically graded homework problems, a grade book, and communication tools.
+        The master sections for these courses are in their final versions. New syllabi have been approved by both the department and college curriculum commiteeies. In addition, in Spring I 2019, we are piloting a section of MAT121 using OER resourses.</p>
       </section> 
       <section>
-        <h3>Student textbook and online platform savings </h3>
+        <h3>Number of OER sections and textbook/online platform savings</h3>
         <p class="lead">For Fall I and II of 2018 there were a total enrollment of more than 5,650 students in 207 OER sections. In Spring 2019 an OER MAT121 section was piloted. For Spring I and II 2019 there were 4,634 students in 159 OER sections. This has led to an estimated textbook savings of $846,907.25 for the 2018-2019 academic year.</p>
 
         
@@ -65,11 +80,11 @@
 
          <div class="row barcharts">
 
-        <div class="col-sm-4">
+        <div class="col-sm-4" >
           <div id="sections-barchart"></div>     
         </div>
 
-        <div class="col-sm-4">
+        <div class="col-sm-4 ">
           <div id="students-barchart"></div>
         </div>
 
@@ -79,15 +94,40 @@
 
         </div>
 
+        <div class="row piechart pierow" >
+
+        <div class="col-sm-4 pierow">
+          <div id="oer_sections-pie" class="pierow"></div>     
+        </div>
+
+        <div class="col-sm-4 pierow">
+          <div id="students-pie" class="pierow"></div>
+        </div>
+
+        <div class="col-sm-4 pierow">
+          <div id="savings-pie" class="pierow"></div>
+        </div>
+
+        </div>
+
       </section>
-
       <section>
-        <h3>OER materials and platforms</h3>
-        <p class="lead">For all of our OER sections we are using the <a href="https://lumenlearning.com/">Lumen Learning Platform</a>. Our master sections are hosted on their Lumen ohm server. Lumen offers a complete education managment system with grade books, a problem bank and communication capabilities. </p>
-      </section> 
 
+      <h3>Mentorship program</h3>
+
+
+
+
+        <p class="lead">In order ensure the switch to OER goes smoothly we instituted a mentorship program. We have ten experienced faculty members who have dedicated hours to help faculty sort out any difficulties that might come up.</p>
+        </section>
+
+      
       <section>
         <h3>Copyright considerations</h3>
+
+
+
+
         <p class="lead">The OER copyright team in consultation with the library has developed a concise set of guidelines for proper attribution of OER/creative commons resources and implemented those guidelines in the master sections. The flow chart below describes the process faculty members should adopt for including outside materials in our courses.</p>
         <div class="row picture">
         
@@ -114,4 +154,5 @@
     </div> <!-- /container -->
   
      <script src="barchart_savings.js"></script>
+     <script src="pie_charts.js"></script>
 </body></html>

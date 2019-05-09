@@ -1,6 +1,6 @@
-var margin = {top: 30, right: 20, bottom: 25, left: 20};
-var height = 150 - margin.top - margin.bottom;
-var width = 250 - margin.left - margin.right;
+var margin = {top:30, right: 40, bottom: 20, left: 30};
+var height = 500 - margin.top - margin.bottom;
+var width = 500 - margin.left - margin.right;
 var svg = {};
 var y = {};
 var x = {};
@@ -8,26 +8,38 @@ var g ={};
 var titles = {'sections': 'Number of OER sections',
              'students': 'Number of OER students',
               'savings': 'Student savings ($)'};
-var semester_names = {'fall': 'Fall 2018',
-             'spring': 'Spring 2019'};
+var semester_names = {'fall': 'Fall',
+             'spring': 'Spring',
+             'totals': 'Total'};
+
+
+var data;
+
+
+
+
 
 
 
 
 d3.csv("oer_data.csv").then(function(data){
+	
+
+	data = data;
 
 	data.forEach(function(d){
 		d.semester = semester_names[d.semester];
+		d.savings = Number(d.savings);
+		d.sections = Number(d.sections);
+		d.students = Number(d.students);
+		
 	});
 
 	console.log(data);
+	
 
      
     function draw(column){
-
-
-
-
         
         y[column] = d3.scaleLinear()
                     .range([height, 0])
@@ -36,7 +48,7 @@ d3.csv("oer_data.csv").then(function(data){
         x[column] = d3.scaleBand()
                          .range([0, width])
                          .domain(data.map((d) => d.semester))
-                         .padding(0.2);
+                         .padding(0.09);
 
 
 
@@ -66,7 +78,7 @@ d3.csv("oer_data.csv").then(function(data){
              .attr('transform', "translate(0,"+height+")")
              .attr("class","axis")
              .call(d3.axisBottom(x[column])
-             	.tickValues(x[column].domain().filter(function(d,i){ return ['Fall','Spring'][i];})));
+             	.tickValues(x[column].domain().filter(function(d,i){ return ['Fall','Spring','Total'][i];})));
 
 
        // g.append('g')
@@ -87,8 +99,8 @@ d3.csv("oer_data.csv").then(function(data){
                       .append("text")
                       .attr("class","bar-labels")
                       .attr('text-anchor', 'middle')
-                      .attr("x",(d,i) => x[column](d.semester)+35)
-                      .attr("y",(d) => margin.top+y[column](d[column]))
+                      .attr("x",(d,i) => x[column](d.semester) + x[column].bandwidth()/2)
+                      .attr("y",(d) => 20+y[column](d[column]))
                       .text((d)=>(column=='savings') ? "$"+d3.format(".3s")(d[column]):
                       	d3.format(",")(d[column]));
 
@@ -102,7 +114,7 @@ d3.csv("oer_data.csv").then(function(data){
      draw('students');
      draw('savings');
 
-})
+   })
 
 
 
