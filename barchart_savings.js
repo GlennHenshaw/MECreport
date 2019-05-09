@@ -1,5 +1,5 @@
 var margin = {top: 30, right: 20, bottom: 20, left: 20};
-var height = 200 - margin.top - margin.bottom;
+var height = 150 - margin.top - margin.bottom;
 var width = 200 - margin.left - margin.right;
 var svg = {};
 var y = {};
@@ -8,14 +8,24 @@ var g ={};
 var titles = {'sections': 'Number of OER sections',
              'students': 'Number of OER students',
               'savings': 'Student savings ($)'};
+var semester_names = {'fall': 'Fall 2018',
+             'spring': 'Spring 2019'};
 
 
 
 
 d3.csv("oer_data.csv").then(function(data){
 
+	data.forEach(function(d){
+		d.semester = semester_names[d.semester];
+	});
+
+	console.log(data);
+
      
     function draw(column){
+
+
 
 
         
@@ -55,7 +65,9 @@ d3.csv("oer_data.csv").then(function(data){
         g.append('g')
              .attr('transform', "translate(0,"+height+")")
              .attr("class","axis")
-             .call(d3.axisBottom(x[column]));
+             .call(d3.axisBottom(x[column])
+             	.tickValues(x[column].domain().filter(function(d,i){ return ['Fall','Spring'][i];})));
+
 
        // g.append('g')
         //     .attr("class","axis")
@@ -77,7 +89,7 @@ d3.csv("oer_data.csv").then(function(data){
                       .attr('text-anchor', 'middle')
                       .attr("x",(d,i) => x[column](d.semester)+30)
                       .attr("y",(d) => margin.top+y[column](d[column]))
-                      .text((d)=>(column=='savings') ? "$"+d3.format(",")(d[column]):
+                      .text((d)=>(column=='savings') ? "$"+d3.format(".3s")(d[column]):
                       	d3.format(",")(d[column]));
 
          
