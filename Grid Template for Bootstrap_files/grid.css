@@ -8,6 +8,15 @@ body {
     text-align: center;
      border-radius: 15px 15px 15px 15px;
 }
+.head h1 {
+  color:black;
+  opacity:.7;
+}
+
+h3 {
+  color:steelBlue;
+  opacity:.9;
+}
 .head p {
   color:white;
   font-weight: 200;
@@ -19,8 +28,37 @@ body {
   color:SteelBlue;
 }
 
+.bar {
+  fill: steelBlue;
+  opacity: .8;
+}
+.graph-title{
+  fill: #E04836;
+  font-size: 15px; 
+  opacity: .8;
+}
+
 .btn:hover {
     background-color: #E04836;
+    opacity:.7;
+}
+.axis path,
+.axis line {
+        fill: none;
+        stroke: black;
+        shape-rendering: crispEdges;
+      }
+      
+      .axis text {
+        font-family: sans-serif;
+        font-size: 10px;
+        color: black;
+      }
+.bar-labels {
+ /* fill:white;*/
+  font-family: sans-serif;
+  font-size: 13px;
+  fill: white;
 }
 
 
@@ -43,7 +81,7 @@ h3 {
   padding-top: 1rem;
   padding-bottom: 1rem;
   color: white;
-  border: 1px solid rgba(86, 61, 124, .2);
+  border: 0px solid rgba(86, 61, 124, .2);
 }
 
 hr {
