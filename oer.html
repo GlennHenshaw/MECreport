@@ -3,9 +3,9 @@
 <html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="icon" href="https://getbootstrap.com/favicon.ico">
+    <meta name="description" content="MEC 2018-2019 Report">
+    <meta name="author" content="Glenn Henshaw">
+  
 
     <title>MEC Final report 2018-2019</title>
 
@@ -14,15 +14,25 @@
     <!-- Bootstrap core CSS -->
     <link href="./css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom styles for this template -->
+
+
+
     <link href="./css/grid.css" rel="stylesheet">
-    <script src="d3.min.js"></script>
+    <link href="./css/bar.css" rel="stylesheet">
+    <link href="./css/pie.css" rel="stylesheet">
+
+    <script src="plotting-library/d3/d3.min.js"></script>
+    <script src="plotting-library/js/basic_chart.js"></script>
+    <script src="plotting-library/js/bar_chart.js"></script>
+    <script src="plotting-library/js/pie_chart.js"></script>
+
   </head>
 
   <body>
     <div class="container">
       <div class="head">
       <h1>MEC Final Report 2018-2019</h1>
-      <p>Updated: May 9th 2019</p>
+      <p>Updated: May 14, 2019</p>
       <p>Glenn Henshaw, Svetoslav Zahariev, and Andi Toce</p>
 
       </div>
@@ -32,11 +42,29 @@
 
        <div class="row menu">
          <a class="btn btn-primary btn-outline-primary" href="index.html" role="button">Introduction</a>
-        <a class="btn btn-primary btn-outline-primary" href="highlights.html" role="button">Highlights</a>
-        <a class="btn btn-primary btn-outline-primary" href="general_info.html" role="button">General MEC Statistics</a>
+
+
+
+      <!--  <a class="btn btn-primary btn-outline-primary" href="highlights.html" role="button">Highlights</a>
+
+
+
+        <a class="btn btn-primary btn-outline-primary" href="general_info.html" role="button">General MEC Statistics</a> -->
+
+
+
         <a class="btn btn-primary btn-outline-primary pressed" href="oer.html" role="button">OER and Digital Technology</a>
+
+       
+       <!--
+
         <a class="btn btn-primary btn-outline-primary" href="coreq.html" role="button">Co-requsite Courses/accelerated models</a>
-        <a class="btn btn-primary btn-outline-primary" href="student_research.html" role="button">Student Reseearch and contests</a>
+
+  
+
+        <a class="btn btn-primary btn-outline-primary" href="student_engagement.html" role="button">Student Engagement</a>
+
+      -->
 
 
       </div>
@@ -59,20 +87,38 @@
 
       <section>
         <h3>OER implimentation</h3>
-        <p class="lead">OER has been completely implimented in the following courses 
-          <ul>
+        <p class="lead">OER has been completely implimented in the courses listed below. Since Fall I 2018 there have been a total of 298 OER sections. The pie graph to the right shows the distribution of courses.</p>
+
+  
+          <div class="row list-pie">
+            
+          <div class="col-sm-6">
+            <p class="lead">
+           <ul class="list-group">
             <li>MAT095: Introduction to Algebra</li>             
             <li>MAT099: Fundamentals of Algebra</li>
             <li>MAT117: Algebra and Trigonometry</li>
             <li>MAT115: College Algebra and Trigonometry</li>
             <li>MAT120: Introduction to Statistics</li>
           </ul>
+          </p>    
+          </div>
+
+          <div class="col-sm-6" align="center">
+            <div id="section-pie" class="pierow list-pie"></div>
+          </div>
+          
+        </div>
+
+    
+        <p class="lead">
         Each course has an OER textbook and a master section that includes automatically graded homework problems, a grade book, and communication tools.
         The master sections for these courses are in their final versions. New syllabi have been approved by both the department and college curriculum commiteeies. In addition, in Spring I 2019, we are piloting a section of MAT121 using OER resourses.</p>
       </section> 
+
       <section>
         <h3>Number of OER sections and textbook/online platform savings</h3>
-        <p class="lead">For Fall I and II of 2018 there were a total enrollment of more than 5,650 students in 207 OER sections. In Spring 2019 an OER MAT121 section was piloted. For Spring I and II 2019 there were 4,634 students in 159 OER sections. This has led to an estimated textbook savings of $846,907.25 for the 2018-2019 academic year.</p>
+        <p class="lead">For Fall I and II of 2018 there were a total enrollment of more than 5,650 students in 207 OER sections. In Spring 2019 an OER MAT121 section was piloted. For Spring I and II 2019 there were 4,634 students in 159 OER sections. This has led to an estimated textbook savings of $843,907.25 for the 2018-2019 academic year.</p>
 
         
 
@@ -94,21 +140,7 @@
 
         </div>
 
-        <div class="row piechart pierow" >
-
-        <div class="col-sm-4 pierow">
-          <div id="oer_sections-pie" class="pierow"></div>     
-        </div>
-
-        <div class="col-sm-4 pierow">
-          <div id="students-pie" class="pierow"></div>
-        </div>
-
-        <div class="col-sm-4 pierow">
-          <div id="savings-pie" class="pierow"></div>
-        </div>
-
-        </div>
+        
 
       </section>
       <section>
@@ -118,8 +150,37 @@
 
 
 
-        <p class="lead">In order ensure the switch to OER goes smoothly we instituted a mentorship program. We have ten experienced faculty members who have dedicated hours to help faculty sort out any difficulties that might come up.</p>
+        <p class="lead">In order ensure the switch to OER goes smoothly we instituted a mentorship program. Eleven faculty members, experienced in both the Lumen platform as well as indivisual mastersections, hold dedicated office hours to help faculty who are new to OER to sort out any difficulties that might come up. In particular, the mentors frequently help faculty overcome minor technical issues involving gradebook navigation, assignment due dates, and assignment creation.</p>
         </section>
+
+
+       <section>
+
+      <h3>Problem set creation and customization</h3>
+
+
+        <p class="lead">The question bank in the Lumen platform is quite extensive. It is largly sufficient for assembling homework problems and tests. However there are some cases where a topic is missing or a question from the library is broken in some way. Broken homework problems can lead to signoficant frustration for students and faculty. Because of this the MEC has put some effort into problem set creation and customization on the Lumen platform. Currently there is only one faculty member that is skilled with the markup language used to create problems. However they created approximately 200 problems which is a significant amount of content.</p>
+        </section>
+
+
+        <section>
+
+
+        <h3>Fall I 2018 faculty OER forum</h3>
+
+
+        <p class="lead">In order to get a better feel for the challenges and sucesses faculty are experiencing the MEC conducted an OER open forum. The theme of the Forum was “OER project expansion challenges and benefits: follow-up to the many meetings held by the OER leaders’ team.” This was an opertunity for faculty to speak theirs minds and gain insight from others. Some of the topics discussed include </p>
+        <ul>
+          <li>Positive and negative experiences with the Lumen platform</li>
+          <li>The general quality of OER materials and common issues</li>
+          <li>Alignment issues between OER mastersections and syllabi</li>
+          <li>Level of technical support</li>
+          <li>A large number of assignments per homework and a large number of homeworks per mastersection.</li>
+          <li>The MAT120 mastersection was singled out as having several issues including poor homework problems, low-quality videos, and problems with syllabus alignment. </li>
+        </ul>
+        <p class="lead">After the forum faculty broke into course specific groups in order to discuss mastersection issues on a more detailed level.</p>
+        </section>
+ 
 
       
       <section>
@@ -128,7 +189,9 @@
 
 
 
-        <p class="lead">The OER copyright team in consultation with the library has developed a concise set of guidelines for proper attribution of OER/creative commons resources and implemented those guidelines in the master sections. The flow chart below describes the process faculty members should adopt for including outside materials in our courses.</p>
+        <p class="lead">The OER copyright team in consultation with a representative from the LaGuardia library developed a concise set of guidelines for proper attribution of OER/creative commons resources. The team implemented those guidelines for the MEC OER master sections. This process entailed going through all of the texbooks, textbook sections, videos, handouts, and computerized homework questions in all of the master sections to make sure that we were in compliance with the respective licenses. In almost every case the resourses had one of the variations of the Creative Commons License. The team added atributions to sections of each master section in order to ensure LaGuardia was in compliance with copyright law.</p>
+
+        <p class="lead">The flow chart below describes the process faculty members should adopt for including outside materials in our courses.</p>
         <div class="row picture">
         
         <div class="col-md-8">
@@ -140,6 +203,13 @@
       </div>
 
       </section> 
+
+      <section>
+        <h3>Hybrid classes</h3>
+        <p class="lead">There are 9 hybrid sections running is Spring I 2019. All are aught by full-time faculty with experience in hybrid are teaching.
+        There was a MyMathLab workshop attended nine faculty members. There were two MyMathLab specialists.
+         </p>
+      </section>
 
       
 
@@ -153,6 +223,5 @@
 
     </div> <!-- /container -->
   
-     <script src="barchart_savings.js"></script>
-     <script src="pie_charts.js"></script>
+     <script src="scripts/oer_script.js"></script>
 </body></html>
