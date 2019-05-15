@@ -23,7 +23,7 @@ class BasicPie extends BasicChart {
 
         let color = d3.scaleOrdinal()
                        .domain(categories)
-                       .range(['#E04836','#F39D41','#8D5924','#5696BC']);
+                       .range(['#E04836','#F39D41','#8D5924','#5696BC','#2F5168']);
 
         
         //chart title

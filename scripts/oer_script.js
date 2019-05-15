@@ -1,4 +1,4 @@
-d3.csv("../data/oer_data.csv").then(function(data){
+d3.csv("data/oer_data.csv").then(function(data){
 
 	data.forEach(function(d){
 		d.sections = +d.sections;
@@ -30,12 +30,12 @@ d3.csv("../data/oer_data.csv").then(function(data){
 })
 
 
-d3.csv("../data/courses.csv").then(function(data){
+d3.csv("data/courses.csv").then(function(data){
 
     test4 = new BasicPie(250,250,'#section-pie');
 
     test4.categories = 'class';
-    test4.title = 'Out of 297 OER Sections';
+    test4.title = 'Out of 366 OER Sections';
     test4.quantities = 'oer_sections';
     test4.drawPie(data);
 
