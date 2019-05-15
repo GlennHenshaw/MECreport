@@ -50,7 +50,7 @@ class BasicBar extends BasicChart{
                             .attr("class","bars")
                             .attr("fill","steelBlue");
 
-         let format = (max_value < 100000) ? d3.format(".2s") : d3.format("$.3s");
+         let format = (max_value < 100000) ? d3.format(".3s") : d3.format("$.3s");
 
          let font_size = 2*x.bandwidth()/(format(max_value).toString().length+2);
         
